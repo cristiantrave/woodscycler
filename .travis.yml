@@ -1,0 +1,15 @@
+#.travis.yml
+language: node_js
+node_js:
+  - "12.16.1"
+branches:
+only:
+  - main
+before_script:
+  - npm install -g @angular/cli
+script:
+  - ng build --prod
+notifications:
+  email:
+  on_failure: change
+  on_success: change
