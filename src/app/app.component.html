@@ -1,2 +1,10 @@
-woodscycler is alive !
+<input type="text" (keyup.enter)="addWood(wood)" #wood>
+<ul>
+    <li *ngFor="let wood of woods">
+        {{ wood.data.name }} - {{ wood.data.size }}
+        <input type="text" (keyup.enter)="updateWood(wood.id, woodName)" #woodName>
+        <button (click)="deleteWood(wood.id)">Delete</button>
+
+    </li>
+</ul>
 
